@@ -1,0 +1,171 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Seguradora Ion Guard Nest
+meta:
+  id: wrk_72b4f6b451fe435bab4edfd5d8638639
+  created: 1772808197493
+  modified: 1772808207794
+  description: ""
+collection:
+  - name: Apólices
+    meta:
+      id: fld_de3c5d229c5546cda1716e536f0ff9d2
+      created: 1772810914087
+      modified: 1772810914087
+      sortKey: -1772810914087
+      description: ""
+    children:
+      - url: http://localhost:4000/apolices
+        name: Listar todas as apólices
+        meta:
+          id: req_fd80c75fe1394fe89496a7164e9352f9
+          created: 1772810916586
+          modified: 1772811231743
+          isPrivate: false
+          description: ""
+          sortKey: -1772810916586
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/apolices/1
+        name: Listar apólice por ID
+        meta:
+          id: req_100db098e0364812a66767c7873e3511
+          created: 1772810942546
+          modified: 1772811325413
+          isPrivate: false
+          description: ""
+          sortKey: -1772719470707.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/apolices
+        name: Criar apólice
+        meta:
+          id: req_ce6b9a60627f488399c8d910a10c4168
+          created: 1772810952311
+          modified: 1772811249607
+          isPrivate: false
+          description: ""
+          sortKey: -1772810952311
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 1,
+            	"tipo_seguro": "Seguro completo",
+            	"valor_plano": 12000.00,
+            	"data_inicio": "2026-06-03",
+            	"data_fim": "2027-06-03",
+            	"status_plano": "Adimplente"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/apolices
+        name: Atualizar apólice
+        meta:
+          id: req_dc75506a1b8d4c76946dfea7f6197428
+          created: 1772811204679
+          modified: 1772811318136
+          isPrivate: false
+          description: ""
+          sortKey: -1772811204679
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 1,
+            	"tipo_seguro": "Seguro completo",
+            	"valor_plano": 12000.00,
+            	"data_inicio": "2026-06-03",
+            	"data_fim": "2027-06-03",
+            	"status_plano": "Cancelado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/apolices/1
+        name: Deletar apólice
+        meta:
+          id: req_0e17e8d3897b4d519df79543d549ab85
+          created: 1772811258029
+          modified: 1772811300892
+          isPrivate: false
+          description: ""
+          sortKey: -1772811258029
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_78a5a7855ed531efd68dd83ea59933d2e90b2d2d
+    created: 1772808197532
+    modified: 1772808197532
+environments:
+  name: Base Environment
+  meta:
+    id: env_78a5a7855ed531efd68dd83ea59933d2e90b2d2d
+    created: 1772808197530
+    modified: 1772808197530
+    isPrivate: false
